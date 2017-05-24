@@ -1,0 +1,13 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center drop-select">
+		<p>I want to see recent <select ng-model="form.type" ng-options='option.value as option.name for option in typeOptions' ng-change="getImagePerPage(form.type)"></select> Photos
+		
+		<ul class="dynamic-grid" angular-grid="pics" grid-width="300" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="false" >
+			<li data-ng-repeat="pic in pics" class="grid" data-ng-clock>
+				<a href="#/size/{{ pic.id }}"><img src="{{pic.url_m}}" class="grid-img" data-actual-width = "{{pic.width_m}}"  data-actual-height="{{pic.height_m}}" /></a>
+			</li>
+		</ul>
+	</div>
+</div>
+</div>

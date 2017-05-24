@@ -1,0 +1,16 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center buttons-listing">
+			<div ng-controller="requestedImageController">
+				<a href="javascript:void(0);" ng-click="sendeBack()" class="btn btn-warning">Back To Available Sizes</a>
+				<a href="#/" class="btn btn-success">Back To Recent Photos</a>
+				<a href="{{ src }}" class="btn btn-primary" download>Download</a>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<img ng-src="{{ src }}" />
+		</div>
+	</div>
+</div>
